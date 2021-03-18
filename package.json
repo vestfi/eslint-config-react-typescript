@@ -1,10 +1,7 @@
 {
   "name": "@vestfi/lint-react-typescript",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Internal lint for vest react typescript apps",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
