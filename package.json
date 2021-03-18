@@ -1,5 +1,5 @@
 {
-  "name": "lint-react-typescript",
+  "name": "lint-react-vestfi-typescript",
   "version": "1.0.0",
   "description": "Internal lint for vest react typescript apps",
   "main": "index.js",
