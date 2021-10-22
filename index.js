@@ -42,10 +42,7 @@ module.exports = {
       },
     ],
     "import/exports-last": "warn",
-    "indent": [
-      "error",
-      2
-    ],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
     "max-lines": [
       "error",
       {
