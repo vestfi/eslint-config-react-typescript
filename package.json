@@ -1,6 +1,6 @@
 {
   "name": "@vestfi/eslint-config-react-typescript",
-  "repository": "git://github.com/vestfi/lint-react-typescript.git",
+  "repository": "git://github.com/vestfi/eslint-config-react-typescript.git",
   "version": "1.0.5",
   "description": "Internal lint for vest react typescript apps",
   "main": "index.js",
@@ -15,24 +15,24 @@
   "files": [
     "index.js"
   ],
-  "eslintConfig": {
-    "extends": "./index.js"
+  "engines": {
+    "node": ">=16.13 <=17"
   },
-  "author": "Vest INC",
+  "author": "Vest Inc",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vestfi/lint-react-typescript/issues"
+    "url": "https://github.com/vestfi/eslint-config-react-typescript/issues"
   },
-  "homepage": "https://github.com/vestfi/lint-react-typescript#readme",
+  "homepage": "https://github.com/vestfi/eslint-config-react-typescript#readme",
   "dependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
-    "eslint": "^7.2.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^1.7.0"
   },
@@ -40,6 +40,9 @@
     "@commitlint/cli": "^14.1.0",
     "@commitlint/config-conventional": "^14.1.0",
     "eslint-config-airbnb": "18.2.1",
-    "husky": "^7.0.4"
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "husky": "^7.0.4",
+    "prettier": "^2.4.1"
   }
 }
