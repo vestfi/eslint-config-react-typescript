@@ -38,7 +38,7 @@ module.exports = {
         'newlines-between': 'always-and-inside-groups',
       },
     ],
-    'import/exports-last': 'warn',
+    'import/exports-last': 'off',
     indent: ['error', 2, { SwitchCase: 1 }],
     'max-lines': [
       'error',
