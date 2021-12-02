@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/vestfi/eslint-config-react-typescript/compare/v1.0.0...v1.1.0) (2021-12-02)
+
+
+### Features
+
+* disable import/exports-last rule ([#11](https://github.com/vestfi/eslint-config-react-typescript/issues/11)) ([c8e7072](https://github.com/vestfi/eslint-config-react-typescript/commit/c8e7072c7132f3bd19439ba0a0ae973787448a1d))
+
 # 1.0.0 (2021-11-03)
 
 
