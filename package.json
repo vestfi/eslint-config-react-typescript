@@ -1,7 +1,7 @@
 {
   "name": "@vestfi/eslint-config-react-typescript",
   "repository": "git://github.com/vestfi/eslint-config-react-typescript.git",
-  "version": "1.0.5-dev4",
+  "version": "1.0.5-dev5",
   "description": "Internal lint for vest react typescript apps",
   "main": "index.js",
   "scripts": {
