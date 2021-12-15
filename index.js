@@ -18,6 +18,7 @@ module.exports = {
     'prettier',
   ],
   parserOptions: {
+    ecmaVersion: 'latest',
     ecmaFeatures: {
       jsx: true,
     },
