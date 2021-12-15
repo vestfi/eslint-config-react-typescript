@@ -14,7 +14,9 @@ module.exports = {
       '@semantic-release/git',
       {
         assets: ['CHANGELOG.md'],
-        message: `chore(release): set "package.json" to ${nextRelease.version}\n\n${nextRelease.notes}`,
+        message:
+          // eslint-disable-next-line no-template-curly-in-string
+          'chore(release): set `package.json` to ${nextRelease.version}\n\n${nextRelease.notes}',
       },
     ],
     '@semantic-release/github',
