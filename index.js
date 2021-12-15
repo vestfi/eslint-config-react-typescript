@@ -6,7 +6,15 @@ module.exports = {
     jest: true,
   },
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'jsx-a11y', 'import', 'react-hooks', 'react'],
+  plugins: [
+    '@typescript-eslint',
+    'jsx-a11y',
+    'import',
+    'react-hooks',
+    'react',
+    'jest',
+    'testing-library',
+  ],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
@@ -15,9 +23,11 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
+    'plugin:jest/recommended',
     'prettier',
   ],
   parserOptions: {
+    ecmaVersion: 'latest',
     ecmaFeatures: {
       jsx: true,
     },
