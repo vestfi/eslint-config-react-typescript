@@ -10,7 +10,6 @@ module.exports = {
       },
     ],
     '@semantic-release/npm',
-    '@semantic-release/github',
     [
       '@semantic-release/git',
       {
@@ -18,5 +17,6 @@ module.exports = {
         message: `chore(release): set "package.json" to ${nextRelease.version}\n\n${nextRelease.notes}`,
       },
     ],
+    '@semantic-release/github',
   ],
 }
