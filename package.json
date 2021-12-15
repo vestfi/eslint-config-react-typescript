@@ -25,7 +25,6 @@
   },
   "homepage": "https://github.com/vestfi/eslint-config-react-typescript#readme",
   "dependencies": {
-    "@react-native-community/eslint-config": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.7.0",
     "eslint": "^8.4.1",
