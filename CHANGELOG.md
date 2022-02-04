@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/vestfi/eslint-config-react-typescript/compare/v1.1.0...v1.2.0) (2022-02-04)
+
+
+### Features
+
+* enable react-hooks/recommended ([#13](https://github.com/vestfi/eslint-config-react-typescript/issues/13)) ([260b1da](https://github.com/vestfi/eslint-config-react-typescript/commit/260b1dac02e622302acb37ac7a2388912e89db09)), closes [/github.com/facebook/create-react-app/issues/6880#issuecomment-485912528](https://github.com//github.com/facebook/create-react-app/issues/6880/issues/issuecomment-485912528)
+
 # [1.1.0](https://github.com/vestfi/eslint-config-react-typescript/compare/v1.0.0...v1.1.0) (2021-12-02)
 
 
