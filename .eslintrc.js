@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ['eslint:recommended', 'airbnb-base', 'prettier'],
+  extends: ['eslint:recommended', 'airbnb-base', 'prettier', "plugin:react-hooks/recommended"],
   plugins: ['prettier'],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -12,5 +12,6 @@ module.exports = {
   },
   rules: {
     'prettier/prettier': ['error'],
+    "indent": "off"
   },
 }
