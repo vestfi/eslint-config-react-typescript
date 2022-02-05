@@ -24,6 +24,7 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:import/typescript',
     'plugin:jest/recommended',
+    'plugin:prettier/recommended',
     'prettier',
   ],
   parserOptions: {
@@ -49,7 +50,6 @@ module.exports = {
       },
     ],
     'import/exports-last': 'off',
-    indent: ['error', 2, { SwitchCase: 1 }],
     'max-lines': [
       'error',
       {
