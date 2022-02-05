@@ -25,6 +25,7 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:jest/recommended',
     'plugin:prettier/recommended',
+    'plugin:react-hooks/recommended',
     'prettier',
   ],
   parserOptions: {
@@ -70,6 +71,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'require-await': 'error',
+    indent: 'off',
   },
   settings: {
     react: {
