@@ -12,6 +12,6 @@ module.exports = {
   },
   rules: {
     'prettier/prettier': ['error'],
-    indent: 'off'
-  }
+    indent: 'off',
+  },
 }
