@@ -14,6 +14,7 @@ module.exports = {
     'react',
     'jest',
     'testing-library',
+    'simple-import-sort',
   ],
   extends: [
     'eslint:recommended',
@@ -74,6 +75,29 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'require-await': 'error',
+    'simple-import-sort/imports': [
+      'error',
+      {
+        groups: [
+          // Side effect imports.
+          ['^\\u0000'],
+          // Packages. `react` related packages come first.
+          ['^react', '^@?\\w'],
+          // Components.
+          ['^(screens|components)(/.*|$)'],
+          // Hooks.
+          ['^(hooks)(/.*|$)'],
+          // Global utils.
+          ['^utils(/.*|$)'],
+          // JSON imports.
+          ['.*.json$'],
+          // Parent imports. Put `..` last.
+          ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+          // Other relative imports. Put same-folder imports and `.` last.
+          ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+        ],
+      },
+    ],
     indent: 'off',
     // Disable explicit-function-return-type for all file types (JS, TS, etc)
     // It will be enabled below only for TS files.
