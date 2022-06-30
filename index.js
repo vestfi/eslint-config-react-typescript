@@ -52,7 +52,6 @@ module.exports = {
     'no-sync': 'error',
     'no-throw-literal': 'error',
     'no-useless-return': 'error',
-    'no-unused-vars': 'error',
     'no-var': 'error',
     'prefer-const': 'error',
     'prefer-destructuring': 'warn',
@@ -89,6 +88,7 @@ module.exports = {
     // It will be enabled below only for TS files.
     // https://github.com/typescript-eslint/typescript-eslint/issues/964
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-unused-vars': 'error',
   },
   overrides: [
     // Enable explicit-function-return-type only for TS files
