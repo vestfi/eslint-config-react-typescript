@@ -30,6 +30,9 @@ Now, any change on this package will be automatically reflected on the consumer 
 
 ## Deployment
 
-1. Create the pull request and get it approved.
-2. Something with `yarn publish` and the tags (?)
-3. Profit!
+1. Don't forget to update the CHANGELOG.
+2. Update the version using `yarn version`
+3. Create the pull request and get it approved.
+4. Once approved, merge your branch into `main`.
+5. Checkout the `main` branch and run `yarn publish`.
+6. Create a Release in GitHub using tags.
