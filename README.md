@@ -26,4 +26,10 @@ In the **project** folder where you want to test this library:
 yarn link @vestfi/eslint-config-react-typescript
 ```
 
-Now, any change on this package will be automatically reflected on the consumer project. 
+Now, any change on this package will be automatically reflected on the consumer project.
+
+## Deployment
+
+1. Create the pull request and get it approved.
+2. Something with `yarn publish` and the tags (?)
+3. Profit!
