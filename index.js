@@ -67,6 +67,8 @@ module.exports = {
           ['^\\u0000'],
           // Packages. `react` related packages come first.
           ['^react', '^@?\\w'],
+          // @vestfi packages.
+          ['^@vestfi?\\w'],
           // Components.
           ['^(components|navigators|screens)(/.*|$)'],
           // Hooks.
