@@ -37,21 +37,6 @@ module.exports = {
   },
   rules: {
     'eol-last': ['error', 'always'],
-    'import/order': [
-      'warn',
-      {
-        groups: [
-          'builtin',
-          'external',
-          'internal',
-          'parent',
-          'sibling',
-          'index',
-        ],
-        'newlines-between': 'always-and-inside-groups',
-      },
-    ],
-    'import/exports-last': 'off',
     'max-lines': [
       'error',
       {
@@ -84,11 +69,11 @@ module.exports = {
           // Packages. `react` related packages come first.
           ['^react', '^@?\\w'],
           // Components.
-          ['^(screens|components)(/.*|$)'],
+          ['^(components|navigators|screens)(/.*|$)'],
           // Hooks.
-          ['^(hooks)(/.*|$)'],
+          ['^(apis|context|hooks)(/.*|$)'],
           // Global utils.
-          ['^utils(/.*|$)'],
+          ['^(assets|constants|helpers|languages|utils)(/.*|$)'],
           // JSON imports.
           ['.*.json$'],
           // Parent imports. Put `..` last.
@@ -98,8 +83,9 @@ module.exports = {
         ],
       },
     ],
+    'simple-import-sort/exports': 'error',
     indent: 'off',
-    // Disable explicit-function-return-type for all file types (JS, TS, etc)
+    // Disable explicit-function-return-type for all file types (JS, TS, etc.)
     // It will be enabled below only for TS files.
     // https://github.com/typescript-eslint/typescript-eslint/issues/964
     '@typescript-eslint/explicit-function-return-type': 'off',
@@ -119,7 +105,7 @@ module.exports = {
     },
     'import/resolver': {
       node: {
-        moduleDirectory: ['src'],
+        paths: ['src'],
       },
     },
   },
