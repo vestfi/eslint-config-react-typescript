@@ -30,9 +30,7 @@ Now, any change on this package will be automatically reflected on the consumer 
 
 ## Deployment
 
-1. Don't forget to update the CHANGELOG.
-2. Update the version using `yarn version`
+1. Make sure what kind of release it will be (fix, minor, major) depending on your commits (https://semantic-release.gitbook.io/semantic-release/#how-does-it-work).
+2. Update the version with `yarn version` to ensure that the version on GitHub packages will match the one on the `package.json`.
 3. Create the pull request and get it approved.
-4. Once approved, merge your branch into `main`.
-5. Checkout the `main` branch and run `yarn publish`.
-6. Create a Release in GitHub using tags.
+4. Once approved, merge your branch into `main` and the semantic release will take care of the rest.
