@@ -8,24 +8,24 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: [
     '@typescript-eslint',
-    'jsx-a11y',
     'import',
-    'react-hooks',
-    'react',
     'jest',
-    'testing-library',
+    'jsx-a11y',
+    'react',
+    'react-hooks',
     'simple-import-sort',
+    'testing-library',
   ],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:jsx-a11y/strict',
-    'plugin:react/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
     'plugin:jest/recommended',
+    'plugin:jsx-a11y/strict',
     'plugin:prettier/recommended',
+    'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'prettier',
   ],
@@ -36,7 +36,10 @@ module.exports = {
     },
   },
   rules: {
+    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-shadow': 'error',
     'eol-last': ['error', 'always'],
+    indent: 'off',
     'max-lines': [
       'error',
       {
@@ -48,7 +51,6 @@ module.exports = {
     'no-alert': 'error',
     'no-extend-native': 'error',
     'no-return-await': 'error',
-    'no-shadow': 'warn',
     'no-sync': 'error',
     'no-throw-literal': 'error',
     'no-useless-return': 'error',
@@ -59,6 +61,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'require-await': 'error',
+    'simple-import-sort/exports': 'error',
     'simple-import-sort/imports': [
       'error',
       {
@@ -84,23 +87,7 @@ module.exports = {
         ],
       },
     ],
-    'simple-import-sort/exports': 'error',
-    indent: 'off',
-    // Disable explicit-function-return-type for all file types (JS, TS, etc.)
-    // It will be enabled below only for TS files.
-    // https://github.com/typescript-eslint/typescript-eslint/issues/964
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/no-unused-vars': 'error',
   },
-  overrides: [
-    // Enable explicit-function-return-type only for TS files
-    {
-      files: ['*.ts', '*.tsx'],
-      rules: {
-        '@typescript-eslint/explicit-function-return-type': ['error'],
-      },
-    },
-  ],
   settings: {
     react: {
       version: 'detect',
