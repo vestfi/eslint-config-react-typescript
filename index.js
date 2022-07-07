@@ -48,7 +48,6 @@ module.exports = {
     'no-alert': 'error',
     'no-extend-native': 'error',
     'no-return-await': 'error',
-    'no-shadow': 'warn',
     'no-sync': 'error',
     'no-throw-literal': 'error',
     'no-useless-return': 'error',
@@ -91,6 +90,7 @@ module.exports = {
     // https://github.com/typescript-eslint/typescript-eslint/issues/964
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-shadow': 'error',
   },
   overrides: [
     // Enable explicit-function-return-type only for TS files
