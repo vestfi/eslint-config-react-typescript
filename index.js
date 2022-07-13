@@ -58,6 +58,7 @@ module.exports = {
     'prefer-const': 'error',
     'prefer-destructuring': 'warn',
     'prettier/prettier': 'error',
+    'react/jsx-no-leaked-render': 'error',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'require-await': 'error',
