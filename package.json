@@ -16,7 +16,7 @@
     "index.js"
   ],
   "engines": {
-    "node": ">=16 <=16.10"
+    "node": ">=16 <=17"
   },
   "author": "Vest Inc",
   "license": "ISC",
