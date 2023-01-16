@@ -35,7 +35,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 16.10.0
+          node-version: 18.13.0
           registry-url: https://npm.pkg.github.com/
           scope: '@vestfi'
       - name: Set current organization as scope
