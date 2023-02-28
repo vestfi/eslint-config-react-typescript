@@ -7,6 +7,7 @@ module.exports = {
   },
   parser: '@typescript-eslint/parser',
   plugins: [
+    '@tanstack/query',
     '@typescript-eslint',
     'import',
     'jest',
@@ -18,6 +19,7 @@ module.exports = {
   ],
   extends: [
     'eslint:recommended',
+    'plugin:@tanstack/eslint-plugin-query/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
