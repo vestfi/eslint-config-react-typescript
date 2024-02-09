@@ -1,6 +1,8 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
+    commonjs: true,
     es6: true,
     node: true,
     jest: true,
@@ -27,28 +29,22 @@ module.exports = {
     'plugin:jest/recommended',
     'plugin:jsx-a11y/strict',
     'plugin:prettier/recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
     'prettier',
   ],
   parserOptions: {
     ecmaVersion: 'latest',
+    sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
     },
   },
   rules: {
+    'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-shadow': 'error',
     'eol-last': ['error', 'always'],
     indent: 'off',
-    'max-lines': [
-      'error',
-      {
-        max: 500,
-        skipBlankLines: true,
-      },
-    ],
+    'max-lines': ['error'],
     'max-params': ['warn', 3],
     'no-alert': 'error',
     'no-extend-native': 'error',
@@ -91,14 +87,64 @@ module.exports = {
       },
     ],
   },
-  settings: {
-    react: {
-      version: 'detect',
-    },
-    'import/resolver': {
-      node: {
-        paths: ['src'],
+  overrides: [
+    // React
+    {
+      files: ['**/*.{js,jsx,ts,tsx}'],
+      plugins: ['react', 'jsx-a11y'],
+      extends: [
+        'plugin:react/recommended',
+        'plugin:react/jsx-runtime',
+        'plugin:react-hooks/recommended',
+        'plugin:jsx-a11y/recommended',
+      ],
+      settings: {
+        react: {
+          version: 'detect',
+        },
+        formComponents: ['Form'],
+        linkComponents: [
+          { name: 'Link', linkAttribute: 'to' },
+          { name: 'NavLink', linkAttribute: 'to' },
+        ],
+        'jsx-a11y': {
+          Button: 'button',
+        },
+        'import/resolver': {
+          typescript: {},
+        },
+      },
+      rules: {
+        indent: 'off',
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          { vars: 'all', args: 'after-used', ignoreRestSiblings: false },
+        ],
       },
     },
-  },
+
+    // Typescript
+    {
+      files: ['**/*.{ts,tsx}'],
+      plugins: ['@typescript-eslint', 'import'],
+      parser: '@typescript-eslint/parser',
+      settings: {
+        'import/internal-regex': '^~/',
+        'import/resolver': {
+          node: {
+            extensions: ['.ts', '.tsx'],
+          },
+          typescript: {
+            alwaysTryTypes: true,
+          },
+        },
+      },
+      extends: [
+        'plugin:@typescript-eslint/recommended',
+        'plugin:import/recommended',
+        'plugin:import/typescript',
+      ],
+    },
+  ],
 }
